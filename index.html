@@ -2148,6 +2148,17 @@
       document.getElementById('dropZoneFilePreview').classList.add('hidden');
     }
 
+    function generateUUID() {
+      if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+        return crypto.randomUUID();
+      }
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+
     async function handleDemandSubmit(e) {
       e.preventDefault();
       if (!selectedDemandFile) {
@@ -2165,7 +2176,7 @@
       btn.disabled = true;
       btnText.innerText = 'Uploading...';
 
-      const demandId = 'dem_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7);
+      const demandId = generateUUID();
       const createdAt = new Date().toISOString();
 
       try {
@@ -2174,7 +2185,8 @@
           const bucket = localStorage.getItem('supabase_bucket') || HARDCODED_SUPABASE_BUCKET;
           const cleanVillage = village.replace(/[^a-zA-Z0-9]/g, '_');
           const cleanMonth = month.replace(/[^a-zA-Z0-9]/g, '_');
-          const filePath = `${cleanMonth}/${cleanVillage}_${Date.now()}_${selectedDemandFile.name}`;
+          const cleanFileName = (selectedDemandFile.name || 'demand.xlsx').replace(/[^a-zA-Z0-9._-]/g, '_');
+          const filePath = `${cleanMonth}/${cleanVillage}_${Date.now()}_${cleanFileName}`;
 
           const { data: uploadData, error: uploadErr } = await supabaseClient.storage
             .from(bucket)
@@ -2383,7 +2395,22 @@
 
       try {
         if (supabaseClient) {
-          await supabaseClient.from('village_demands').delete().eq('id', demandId);
+          const rec = demandsList.find(d => d.id === demandId);
+          if (rec && rec.file_url) {
+            try {
+              const bucket = localStorage.getItem('supabase_bucket') || HARDCODED_SUPABASE_BUCKET;
+              const marker = `/${bucket}/`;
+              const idx = rec.file_url.indexOf(marker);
+              if (idx !== -1) {
+                const storagePath = decodeURIComponent(rec.file_url.substring(idx + marker.length));
+                await supabaseClient.storage.from(bucket).remove([storagePath]);
+              }
+            } catch (storageErr) {
+              console.warn('Storage cleanup notice:', storageErr);
+            }
+          }
+          const { error } = await supabaseClient.from('village_demands').delete().eq('id', demandId);
+          if (error) throw error;
         } else {
           await DemoDB.deleteFile(demandId);
           const localList = JSON.parse(localStorage.getItem('thingsulthliah_demands') || '[]').filter(d => d.id !== demandId);
