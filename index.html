@@ -870,6 +870,7 @@
       if (!name) return '';
       let s = name.toLowerCase().replace(/[-_]/g, ' ');
       s = s.replace(/\(.*\)/g, '');
+      s = s.replace(/\bhualngo\s*hmun\b/g, 'hualngohmun');
       s = s.replace(/\bs[\.\s]+maubuang\b/g, 'maubuang').replace(/\bsouth\s*maubuang\b/g, 'maubuang');
       s = s.replace(/\bthingdawl\s*melriat\b/g, 'melriat').replace(/\bthingdawl\b/g, 'melriat');
       return s.trim().replace(/\s+/g, ' ');
