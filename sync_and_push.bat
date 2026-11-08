@@ -1,13 +1,14 @@
 @echo off
-title Sync Thingsulthliah RD Block Data
+title Sync Aibawk RD Block Data
 echo ============================================================
-echo   Syncing fresh MGNREGA data for Thingsulthliah RD Block...
+echo   Syncing fresh MGNREGA data for Aibawk RD Block...
 echo ============================================================
 echo.
+cd /d "%~dp0"
 python scraper.py
 if %ERRORLEVEL% NEQ 0 (
     echo.
-    echo [ERROR] Scraper encountered an error. Data was NOT modified.
+    echo [ERROR] Scraper encountered an error or needs configuration.
     pause
     exit /b %ERRORLEVEL%
 )
@@ -15,7 +16,7 @@ if %ERRORLEVEL% NEQ 0 (
 echo.
 echo Committing and pushing fresh data to GitHub Pages...
 git add data/
-git commit -m "Manual sync Thingsulthliah report data: %date% %time%"
+git commit -m "Manual sync Aibawk report data: %date% %time%"
 git push origin main
 
 echo.

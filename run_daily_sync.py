@@ -6,7 +6,8 @@ import ctypes
 import threading
 from datetime import datetime
 
-LOGFILE = r"E:\thingsulthliah_reports\auto_sync.log"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LOGFILE = os.path.join(BASE_DIR, "auto_sync.log")
 
 def log(msg):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -97,23 +98,22 @@ def sync_repository(repo_path, repo_name):
 def main():
     start_total = time.time()
     log("="*60)
-    log("DAILY AUTOMATED SYNC STARTED")
+    log("DAILY AUTOMATED SYNC STARTED - AIBAWK RD BLOCK")
     log("="*60)
 
     # Show non-blocking popup to confirm to user that sync has started
-    show_popup("VB-G RAM G Daily Sync", "Daily automated sync started for Thingsulthliah & Saitual...\nRunning in background.", timeout_ms=3500, wait=False)
+    show_popup("VB-G RAM G Daily Sync", "Daily automated sync started for Aibawk RD Block...\nRunning in background.", timeout_ms=3500, wait=False)
 
-    success_things = sync_repository(r"E:\thingsulthliah_reports", "Thingsulthliah RD Block")
-    success_saitual = sync_repository(r"E:\saitual_reports", "Saitual District")
+    success = sync_repository(BASE_DIR, "Aibawk RD Block")
 
     total_time = time.time() - start_total
     log(f"DAILY AUTOMATED SYNC FINISHED in {total_time:.1f} seconds.")
     log("="*60 + "\n")
 
-    if success_things and success_saitual:
-        summary_msg = f"Sync finished successfully in {total_time:.0f}s.\nThingsulthliah & Saitual updated & pushed to GitHub!"
+    if success:
+        summary_msg = f"Sync finished successfully in {total_time:.0f}s.\nAibawk RD Block data updated & pushed to GitHub!"
     else:
-        summary_msg = f"Sync finished with warnings in {total_time:.0f}s.\nCheck auto_sync.log for details."
+        summary_msg = f"Sync finished with warnings/placeholders in {total_time:.0f}s.\nCheck auto_sync.log for details."
         
     show_popup("VB-G RAM G Sync Completed", summary_msg, timeout_ms=5000, wait=True)
 

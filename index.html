@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mizoram VB-G RAM G Reports Mirror (Thingsulthliah Block, Aizawl District)</title>
+  <title>Mizoram VB-G RAM G Reports Mirror (Aibawk Block, Aizawl District)</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -127,9 +127,9 @@
         <div class="min-w-0">
           <div class="flex items-center gap-2">
             <h1 class="font-extrabold text-sm sm:text-base tracking-tight text-white truncate">Mizoram VB-G RAM G Portal</h1>
-            <span class="bg-white/20 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-white/30 whitespace-nowrap shadow-xs">10 VILLAGES</span>
+            <span class="bg-white/20 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-white/30 whitespace-nowrap shadow-xs">20 VILLAGES</span>
           </div>
-          <p class="text-purple-100/90 text-xs hidden sm:block truncate">Thingsulthliah RD Block Community Mirror • Aizawl District</p>
+          <p class="text-purple-100/90 text-xs hidden sm:block truncate">Aibawk RD Block Community Mirror • Aizawl District</p>
         </div>
       </div>
       
@@ -158,7 +158,7 @@
             <span class="text-[11px] font-extrabold tracking-wider text-purple-900/60 uppercase">Scope:</span>
             <span id="activeVillagePill" class="bg-white text-purple-950 border border-purple-300/80 text-xs font-extrabold px-3 py-1 rounded-full inline-flex items-center gap-1.5 shadow-sm">
               <span class="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
-              <span>All 10 Villages</span>
+              <span>All 20 Villages</span>
             </span>
           </div>
           <p id="globalVillageSubtext" class="text-xs text-purple-900/70 hidden lg:block font-medium">All 4 tabs update dynamically to this village</p>
@@ -169,7 +169,7 @@
           <div class="relative flex-1 sm:w-80">
             <select id="globalVillageSelect" onchange="onGlobalVillageChange(this.value)" 
                     class="w-full appearance-none bg-gradient-to-r from-pink-100 via-rose-50 to-pink-100 text-rose-950 font-black text-xs sm:text-sm rounded-xl pl-3.5 pr-10 py-2.5 border-2 border-pink-400 shadow-md ring-4 ring-pink-200/80 hover:border-pink-500 hover:from-pink-200/80 hover:to-rose-100 focus:outline-none focus:ring-4 focus:ring-pink-300 cursor-pointer transition">
-              <option value="ALL" style="background:#ffffff; color:#831843; font-weight:bold;">📍 All My 10 Villages (Combined)</option>
+              <option value="ALL" style="background:#ffffff; color:#831843; font-weight:bold;">📍 All My 20 Villages (Combined)</option>
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-pink-600">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,7 +179,7 @@
           </div>
           <button onclick="onGlobalVillageChange('ALL')" 
                   class="bg-gradient-to-r from-purple-700 to-violet-700 hover:from-purple-800 hover:to-violet-800 text-white text-xs font-bold px-3.5 py-2 sm:py-2.5 rounded-xl shadow-xs transition whitespace-nowrap active:scale-95 shrink-0" 
-                  title="Reset to view all 10 target villages">
+                  title="Reset to view all 20 target villages">
             All Villages
           </button>
         </div>
@@ -226,7 +226,7 @@
           <div class="absolute inset-0 animate-spin rounded-full border-4 border-indigo-600 border-t-transparent"></div>
           <div class="absolute inset-0 flex items-center justify-center"><i data-lucide="layers" class="w-5 h-5 text-indigo-500"></i></div>
         </div>
-        <p class="text-slate-500 font-medium text-sm">Fetching Thingsulthliah Block synced data<span class="animate-pulse">...</span></p>
+        <p class="text-slate-500 font-medium text-sm">Fetching Aibawk Block synced data<span class="animate-pulse">...</span></p>
       </div>
       <div class="max-w-4xl mx-auto space-y-3 px-2">
         <div class="skeleton h-12 rounded-xl"></div>
@@ -261,7 +261,7 @@
           <div>
             <div class="text-[10px] font-bold tracking-wider uppercase text-purple-800/70">Selected Village Scope</div>
             <div class="text-sm sm:text-base font-extrabold text-purple-950 flex items-center gap-2">
-              <span class="tab-active-village-name">All 10 Villages (Combined)</span>
+              <span class="tab-active-village-name">All 20 Villages (Combined)</span>
               <span class="text-[10px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded-full ring-1 ring-purple-200 inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse"></span>Active</span>
             </div>
           </div>
@@ -278,7 +278,7 @@
           <div>
             <h2 class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 flex items-center gap-2">
               <i data-lucide="id-card" class="w-5 h-5 text-purple-700"></i>
-              <span>Active Job Cards Register (Thingsulthliah Block)</span>
+              <span>Active Job Cards Register (Aibawk Block)</span>
             </h2>
             <p class="text-slate-500 text-xs mt-0.5">
               Filtered directory of active households across all Panchayats. Deleted cards with asterisks (*) are stripped out.
@@ -288,7 +288,7 @@
             <!-- Village Badge Indicator -->
             <div class="flex items-center gap-1.5 bg-slate-100 border border-slate-200 px-3 py-2 rounded-xl text-xs text-slate-700">
               <span class="text-slate-400">Village:</span>
-              <span id="jcActiveVillageBadge" class="font-bold text-indigo-700">All 10 Villages</span>
+              <span id="jcActiveVillageBadge" class="font-bold text-indigo-700">All 20 Villages</span>
             </div>
             <!-- Search Input -->
             <div class="relative w-full sm:w-72">
@@ -358,7 +358,7 @@
           <div>
             <div class="text-[10px] font-bold tracking-wider uppercase text-purple-800/70">Selected Village Scope</div>
             <div class="text-sm sm:text-base font-extrabold text-purple-950 flex items-center gap-2">
-              <span class="tab-active-village-name">All 10 Villages (Combined)</span>
+              <span class="tab-active-village-name">All 20 Villages (Combined)</span>
               <span class="text-[10px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded-full ring-1 ring-purple-200 inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse"></span>Active</span>
             </div>
           </div>
@@ -474,7 +474,7 @@
           <div>
             <div class="text-[11px] font-bold tracking-wider uppercase text-purple-900">Village Work Demand Submissions</div>
             <div class="text-sm sm:text-base font-extrabold text-slate-900 flex items-center gap-2">
-              <span class="tab-active-village-name">All 10 Villages (Combined)</span>
+              <span class="tab-active-village-name">All 20 Villages (Combined)</span>
               <span id="storageModeBadge" class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full ring-1 ring-amber-200 inline-flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>Demo Mode (Browser Storage)
               </span>
@@ -499,7 +499,7 @@
         <div class="lift bg-white p-4 rounded-2xl border border-slate-200 shadow-soft relative overflow-hidden">
           <div class="text-[11px] text-slate-500 font-semibold uppercase tracking-wide">Total Demand Files</div>
           <div class="text-2xl font-extrabold text-slate-900 mt-1" id="kpiDemandsTotal">0</div>
-          <div class="text-[11px] text-slate-400 mt-0.5">Across all 10 villages</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Across all 20 villages</div>
         </div>
         <div class="lift bg-white p-4 rounded-2xl border border-slate-200 shadow-soft relative overflow-hidden">
           <div class="text-[11px] text-purple-700 font-semibold uppercase tracking-wide">Current Target Month</div>
@@ -540,7 +540,7 @@
                 <label class="block text-xs font-bold text-slate-700 mb-1">Target Village / Gram Panchayat <span class="text-red-500">*</span></label>
                 <select id="demandVillageInput" required class="w-full text-sm border border-slate-200 rounded-xl px-3 py-2 bg-slate-50 font-medium text-slate-800 focus:bg-white focus:border-purple-400 transition">
                   <option value="" disabled selected>-- Select Village --</option>
-                  <!-- Populated dynamically with the 10 villages -->
+                  <!-- Populated dynamically with the 20 villages -->
                 </select>
               </div>
 
@@ -675,7 +675,7 @@
           <div>
             <div class="text-[10px] font-bold tracking-wider uppercase text-purple-800/70">Selected Village Scope</div>
             <div class="text-sm sm:text-base font-extrabold text-purple-950 flex items-center gap-2">
-              <span class="tab-active-village-name">All 10 Villages (Combined)</span>
+              <span class="tab-active-village-name">All 20 Villages (Combined)</span>
               <span class="text-[10px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded-full ring-1 ring-purple-200 inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse"></span>Active</span>
             </div>
           </div>
@@ -786,7 +786,7 @@
         <div class="min-w-0">
           <div class="flex items-center gap-2">
             <span class="text-[10px] bg-white/20 text-white font-bold px-2 py-0.5 rounded-md uppercase tracking-wider border border-white/30" id="modalPanchayat">Panchayat</span>
-            <span class="text-purple-100 text-xs truncate" id="modalBlock">Thingsulthliah RD Block</span>
+            <span class="text-purple-100 text-xs truncate" id="modalBlock">Aibawk RD Block</span>
           </div>
           <h3 class="text-lg sm:text-xl font-extrabold mt-1 text-white truncate tracking-tight" id="modalWorkerName">Worker Name</h3>
           <p class="text-purple-100/80 text-xs font-mono mt-0.5 truncate" id="modalJobCardNo">Job Card No.</p>
@@ -827,7 +827,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
       <div class="flex items-center gap-2">
         <span class="inline-flex items-center justify-center h-6 w-6 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 text-white shadow-sm"><i data-lucide="layers" class="w-3.5 h-3.5"></i></span>
-        <span class="font-semibold text-slate-600">Thingsulthliah Block Community Mirror (Aizawl District)</span>
+        <span class="font-semibold text-slate-600">Aibawk Block Community Mirror (Aizawl District)</span>
       </div>
       <p>Data mirrored from
         <a href="https://vbgramgrep.dord.gov.in" target="_blank" class="inline-flex items-center gap-1 text-purple-700 font-semibold hover:text-indigo-800 hover:underline underline-offset-2 transition">
@@ -841,31 +841,42 @@
     let appData = null;
 
     const TARGET_10_VILLAGES = [
-      { key: "darlawng", label: "Darlawng" },
-      { key: "phulmawi", label: "Phulmawi" },
-      { key: "seling", label: "Seling" },
-      { key: "sesawng i", label: "SESAWNG I" },
-      { key: "sesawng ii", label: "SESAWNG II" },
-      { key: "sesawng iii", label: "SESAWNG III" },
-      { key: "thingsulthliah i", label: "Thingsulthliah - I" },
-      { key: "thingsulthliah ii", label: "Thingsulthliah II" },
-      { key: "tlangnuam", label: "Tlangnuam" },
-      { key: "tlungvel", label: "Tlungvel" }
+      { key: "aibawk", label: "Aibawk" },
+      { key: "chamring", label: "Chamring" },
+      { key: "chawilung", label: "Chawilung" },
+      { key: "falkawn", label: "Falkawn" },
+      { key: "hmuifang", label: "Hmuifang" },
+      { key: "hualngohmun", label: "Hualngohmun" },
+      { key: "kelsih", label: "Kelsih" },
+      { key: "lamchhip", label: "Lamchhip" },
+      { key: "lungsei", label: "Lungsei" },
+      { key: "maubuang", label: "Maubuang" },
+      { key: "melriat", label: "Melriat" },
+      { key: "muallungthu", label: "Muallungthu" },
+      { key: "phulpui", label: "Phulpui" },
+      { key: "sailam", label: "Sailam" },
+      { key: "samlukhai", label: "Samlukhai" },
+      { key: "sateek", label: "Sateek" },
+      { key: "sialsuk", label: "Sialsuk" },
+      { key: "sumsuih", label: "Sumsuih" },
+      { key: "tachhip", label: "Tachhip" },
+      { key: "thiak", label: "Thiak" }
     ];
+    const TARGET_20_VILLAGES = TARGET_10_VILLAGES;
 
     let currentGlobalVillage = 'ALL';
 
     function normalizeVillage(name) {
       if (!name) return '';
       let s = name.toLowerCase().replace(/[-_]/g, ' ');
-      s = s.replace(/\(.*?\)/g, '');
-      s = s.replace(/\bthingsulthliah\s*1\b/g, 'thingsulthliah i').replace(/\bthingsulthliah\s*2\b/g, 'thingsulthliah ii');
-      s = s.replace(/\bsesawng\s*1\b/g, 'sesawng i').replace(/\bsesawng\s*2\b/g, 'sesawng ii').replace(/\bsesawng\s*3\b/g, 'sesawng iii');
+      s = s.replace(/\(.*\)/g, '');
+      s = s.replace(/\bs[\.\s]+maubuang\b/g, 'maubuang').replace(/\bsouth\s*maubuang\b/g, 'maubuang');
+      s = s.replace(/\bthingdawl\s*melriat\b/g, 'melriat').replace(/\bthingdawl\b/g, 'melriat');
       return s.trim().replace(/\s+/g, ' ');
     }
 
     function getVillageLabel(key) {
-      if (key === 'ALL') return 'All 10 Villages';
+      if (key === 'ALL') return 'All 20 Villages';
       const found = TARGET_10_VILLAGES.find(v => v.key === normalizeVillage(key));
       return found ? found.label : key;
     }
@@ -1033,10 +1044,10 @@
     function onGlobalVillageChange(val) {
       currentGlobalVillage = val;
       const label = getVillageLabel(val);
-      const displayLabel = (val === 'ALL') ? 'All 10 Villages (Combined)' : label + ' GP';
+      const displayLabel = (val === 'ALL') ? 'All 20 Villages (Combined)' : label + ' GP';
       
       const pill = document.getElementById('activeVillagePill');
-      if (pill) pill.innerText = (val === 'ALL') ? 'All 10 Villages' : label + ' GP';
+      if (pill) pill.innerText = (val === 'ALL') ? 'All 20 Villages' : label + ' GP';
 
       const sel = document.getElementById('globalVillageSelect');
       if (sel && sel.value !== val) sel.value = val;
@@ -1695,7 +1706,7 @@
             <td colspan="5" class="py-12 text-center text-slate-400">
               <i data-lucide="clipboard-x" class="w-8 h-8 mx-auto mb-2 text-slate-300"></i>
               <p class="font-semibold text-slate-600">No muster rolls found for this selection</p>
-              <p class="text-xs text-slate-400 mt-1">Try switching to 'All My 10 Villages' or clearing your search query.</p>
+              <p class="text-xs text-slate-400 mt-1">Try switching to 'All My 20 Villages' or clearing your search query.</p>
             </td>
           </tr>
         `;
@@ -2018,7 +2029,7 @@
 
     // Database wrapper for Demo Mode (stores actual files in browser IndexedDB)
     const DemoDB = {
-      dbName: 'ThingsulthliahDemandsDB',
+      dbName: 'AibawkDemandsDB',
       storeName: 'files',
       open() {
         return new Promise((resolve, reject) => {
@@ -2233,9 +2244,9 @@
             created_at: createdAt
           };
 
-          const localList = JSON.parse(localStorage.getItem('thingsulthliah_demands') || '[]');
+          const localList = JSON.parse(localStorage.getItem('aibawk_demands') || '[]');
           localList.unshift(record);
-          localStorage.setItem('thingsulthliah_demands', JSON.stringify(localList));
+          localStorage.setItem('aibawk_demands', JSON.stringify(localList));
         }
 
         // Reset form
@@ -2262,13 +2273,13 @@
           if (!error && data) {
             demandsList = data;
           } else {
-            demandsList = JSON.parse(localStorage.getItem('thingsulthliah_demands') || '[]');
+            demandsList = JSON.parse(localStorage.getItem('aibawk_demands') || '[]');
           }
         } else {
-          demandsList = JSON.parse(localStorage.getItem('thingsulthliah_demands') || '[]');
+          demandsList = JSON.parse(localStorage.getItem('aibawk_demands') || '[]');
         }
       } catch (e) {
-        demandsList = JSON.parse(localStorage.getItem('thingsulthliah_demands') || '[]');
+        demandsList = JSON.parse(localStorage.getItem('aibawk_demands') || '[]');
       }
       renderDemands();
     }
@@ -2413,8 +2424,8 @@
           if (error) throw error;
         } else {
           await DemoDB.deleteFile(demandId);
-          const localList = JSON.parse(localStorage.getItem('thingsulthliah_demands') || '[]').filter(d => d.id !== demandId);
-          localStorage.setItem('thingsulthliah_demands', JSON.stringify(localList));
+          const localList = JSON.parse(localStorage.getItem('aibawk_demands') || '[]').filter(d => d.id !== demandId);
+          localStorage.setItem('aibawk_demands', JSON.stringify(localList));
         }
         await loadDemands();
       } catch (err) {

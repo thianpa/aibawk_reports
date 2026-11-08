@@ -1,4 +1,4 @@
-name: Daily Mizoram VB-G RAM G Sync (Thingsulthliah Block)
+name: Daily Mizoram VB-G RAM G Sync (Aibawk Block)
 
 on:
   # NOTE: The NIC portal (vbgramgrep.dord.gov.in) geo-blocks non-Indian / cloud datacenter IPs (401 Unauthorized).
@@ -44,7 +44,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/latest.json data/passbook.json data/emr_url_dates_cache.json data/wagelist_work_cache.json
           if [ -n "$(git status --porcelain data/)" ]; then
-            git commit -m "Auto-sync Thingsulthliah report data: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "Auto-sync Aibawk report data: $(date -u +'%Y-%m-%d %H:%M UTC')"
             git pull --rebase origin main
             git push origin main
           else
